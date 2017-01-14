@@ -1,0 +1,12 @@
+Code for skimming and slimming CAF Ntuples.  For VBS W(lnu)V(jj)jj 8 TeV analysis.
+
+Note: I don't use this code to submit grid jobs anymore.
+
+To use:
+make
+./SkimSlimLvqqNtuple 1 <dsID> <systname="Nominal">    #1 for MC, 0 for data
+
+You need to have a list of CAF files to be slimmed in a txt file called "input."+dsId+"."+syst+".txt"
+
+Modified code based on code from Higgs group
+https://svnweb.cern.ch/trac/atlasoff/browser/PhysicsAnalysis/HiggsPhys/HSG3/WWDileptonAnalysisCode/HWWSlimmD3PD/trunk/Submit2012/SkimSlimSMWZD3PD.C
