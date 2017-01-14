@@ -1,0 +1,92 @@
+May 11, 15
+signalTruthStudy.C : modified from shapeCompWithQCD.C. Investigated transverse mass distribution of signal samples. creates plots_signalTruthStudy_%s.pdf
+print_events.C : read information from D3PD root files.
+getGoodnessOfFit.C :  goodness of fit for Data and MC
+Wgamma.C : investigation of Wgamma  samples. Compared WW and Wgamma.
+readCAF.C : read CAF files directly. Produces pdf
+nevents_np.C : Calculate the yield of individual Alpgen W+jets (NP0, NP1 etc) samples
+plotMakerHww_old.C
+mTvslepPt.C : 2d plots showing correlation between mT and ptwlep
+badLepton.C : this code is for comparing QCD in QCD enriched region. Was used to compare distributions before and after bad lepton bug fix
+mTstudy.C : This was used to compare electron and muon plots for transverse mass study.
+isolation_eff.C : Used to calculate efficiency for different isolation cuts.
+truthQCDWgamma.C : Compared our reconstructed distribution against truth distributions obtained from old truthntuples framework. Used for Wgamma study to investigate QCD contribution to Wgamma. See plots in ~azaman/haifefng2/...
+tgraph.C : plot a graph of significance and purity, with WW+WZ as signal and Wgamma as bkg, as a function of emfrac cut. Used for Wgamma study.
+readCAFSlim.C : A more sophisticated version of readCAF.C. Produces output.root containing histograms filled using CAF/Slim information. Used to study lepton isolation.
+Wgamma_eff.C: this code is for investigation of cut efficiency of emfraction
+reweight.C : Before and after reweighting comparison of ttbar sample
+ptWlepStudy.C : statistical error for Alpgen and Sherpa W+jets samples
+isolationStudy.C : plot isolation variables for VBS signal, WW (lvjj@8TeV signal) and data with MET<25 (proxy for QCD)
+shapeCompWithQCD.C slightly deprecated. See shapeCompWithSignal.C
+shapeCompNoQCD.C 
+shapeComp_tmp2.C shape comparison of different flavors (em,ep,mm,mp)
+plotMakerHww.C
+plotOne.C : basic plotting from a hwwlvqq root file
+syst_JER_BaseJES.C : Comparing JER, JESUp and JESDown with Nominal distribution
+print_events2.C : Directly read information from slimntuples. later version of print_events.C
+cutflow_CAF.C : Prints out SMWZ and Common CAF cutflow. Need to run like "root -l -b -q cutflow_CAF.C+" (uncompiled code crashes)
+cutflow_CAF2.C : Use this code for CAF cutflows. Modified version of cutflow_CAF.C. Need to run like "root -l -b -q cutflow_CAF.C+" (uncompiled code crashes). 
+cutflow_CAF_blah.C : Modified version of cutflow_CAF.C. Counts number of empty CAF files.
+cutflow_CAFSlim.C : Quickly compare CAF output and slim input
+cutflow.C : Quickly print out cutflows if you don't want to use interCutFlow.C
+syst_all.C : DEPRECATED. produces syst vs nominal plots. Stores it into syst_comparison directory.Error on ratio is wrong. Use sys_response3.C instead.
+alpgenWjetsStudy.C : Study Alpgen NP samples. Get stat error for different slices.
+stackPlotWithSignal.C : stack plot with signal overlaid. I am using a different macro because it feels cleaner this way and I don't have to edit the usual data-MC comparison stack plots.
+syst_response_commonEvents.C : This was for testing. Looked at the common events to see if Up and Down syst comtribution is symmentric.
+syst_response2.C : Reads ratio...root files, so error bars will be correct on the ratio of syst to Nominal. Compares Up against Down type syst. 
+syst_response2.1.C : Reads histograms from hwwlvqq files. So error bars will be wrong on the ratio of syst to Nominal. But often we are only interested in the ratio but not on the error on the ratio, and this macro does enough in that case. Otherwise very similar to syst_response2.C as it also compares Up against Down syst. 
+syst_response.C : Just Up type systematic response. Compare one at a time against Nominal.
+syst_response3.C :[ DEPRECATED. Use syst_response4.C.] Up type systematic response. Compare upto eight at a time against Nominal.
+syst_response4.C : Similar to syst_response3.C i.e. compares upto eight systematics at a time against Nominal. Reads ratio...root files, so error bars will be correct on the ratio of syst to Nominal.
+syst_response4.1.C : Similar to syst_response4.C, but plots only systematic/Nominal ratio
+syst_response5.1.C : Unlike syst_response4.1.C, calculates ratio histograms from Nominal, syst, both etc histograms instead of reading it directly from ratio...root files.
+syst_response5.1_merge.C : Similar to syst_response5.1.C. Merges all fouur channels. Can plot variable bin histogram for mTWV. Calculates ratio histograms from Nominal, syst, both etc histograms instead of reading it directly from ratio...roo
+blah2.C
+stackPlotNoQCD.C :
+stackPlotNoQCD_extrapolation.C : fake region stack plot, shows ptwlep distribution  
+blah.C
+stackPlotWithQCD.C
+sherpaAlp.C : Used for quickly compare two distributions with their ratio in the bottom panel (which assumes uncorrelated distributions).
+sherpaAlp2.C : Instead of comparing just two samples, it compares a sample against bkg subtracted Data. Also gets the goodness of fit.
+sherpaAlp_tmp.C : code compares Sherpa and Alpgen. Error band is calculated by varying renormalization-factrization and CKKW scale in SHERPA
+sherpaAlp_resolve.C : code compares Sherpa and Alpgen variable bin mTWV distributions. This code is for resolved region where electron and muon merged together but positive and negative kept separate.
+sherpaAlp_fat.C : code compares Sherpa and Alpgen variable bin mTWV distributions. fat region where electron, positron, muon and anti-muon merged together.
+
+syst_band.C : plots Data-MC and their ratio and then adds the systematic band to the ratio plot.
+
+getHighestDeviationForSyst.h : The function loops over histogram bins and calculate the relative deviation from the nominal due to a systematic source. It prints out the maximum deviation. 
+optimize_mjjTagged.C --> This macro calculates the number of event surviving mjjTagged cut. Used for limit setting.
+ascii_to_TTree.C -->  create ROOT TTrees "basic2.root" from ascii files stored in TXT directories.
+valerio.C --> creates root files containing histograms for fitting
+upperLimit.C--> Used to do a quick limit calculation, given signal and bkg events
+
+histfitter_shape.C --> shape comparison for HistFitter
+QCD_estimation_ptwlep.C --> this is to get yield for a particular control region for different samples
+CR_purity.C --> calculate Control region purity.
+
+badLepton_cutEff.C --> Calculate QCD yield, create latex file showing QCD yield, create root file with QCD yield etc.
+tgraph_QCD_ptwlep.C --> QCD yield graph against ptwlep cut. Uses root files produced by badLepton_cutEff.C
+
+shapeCompWithSignal.C --> You may edit this file. Shape comparison
+shapeCompWithSignal_tmp  --> PLEASE DON'T CHANGE IT shape comparison with ttbar, W+jets, signal SM and signal aQGC
+shapeCompWithSignal_tmp2 --> PLEASE DON'T CHANGE IT shape comparison between different signal points
+
+shapeCompQCDEstimation.C --> PLEASE DON'T CHANGE IT compare the shapes that go into QCD estimation fitting
+
+syst_band_merged.C --> stack plots with systematic bands. All four channels together.
+syst_band_SC.C --> stack plots with systematic bands. All channels separated. W+jets scaled
+syst_band_SC_tmp2.C --> stack plots with systematic bands. All four channels added together. No scaling for W+jets.
+syst_band_resolved.C (previously syst_band_SC_tmp3.C) --> stack plots with systematic bands. Positive and negative lepton plots for resolved. 
+
+syst_band_ptwlep.C --> ptwlep variable bin stack plot. This was required to rebin the initial bins because they were too fine
+syst_band_ptwlep_resolved.C --> ptwlep variable bin stack plot. Required to  rebin the initial fine bins. This code is for resolved region where electron and muon merged together but positive and negative kept separate.
+syst_band_ptwlep_fat.C --> ptwlep variable bin stack plot. Required to  rebin the initial fine bins. This code is for fat region where all four channels are added together
+
+cutflow_tmp.C --> Used it to do aTGC studies
+
+RunQGCFitHandler.C--> Got it from Brian, lists all the systematics used in the analysis
+
+plot_allcutflow_hwwlvqq.C --> Plots all the cutflow files in a hwwlvqq.root file
+
+check_hwwlvqq.C --> Investigate an hwwlvqq.root file
+

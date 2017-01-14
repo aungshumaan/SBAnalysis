@@ -1,0 +1,1 @@
+ratio...2.root batch fixes a bug in ratio...root batch which calculated the ratio wrong. It used NominalOnly+both for Nominal and systOnly+both for syst.
